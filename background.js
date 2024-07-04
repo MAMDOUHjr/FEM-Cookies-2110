@@ -2,13 +2,13 @@ console.log("Background script loading");
 
 // Function to save a cookie to Cloudflare KV
 function saveCookieToCloudflareKV(cookieValue) {
-  const accountID = "f178d4c8c43acc247a04c9ea94017495";
-  const namespaceID = "9bf25b63071e43b6a2a92b8aef6a64cf";
-  const key = "FEMC";
+  const accountID = "70519d70a3636a1c4618c7b106fe13ea";
+  const namespaceID = "b0b10aa96ddb42dc894d121a6eb3e844";
+  const key = "CS2110";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
     "Content-Type": "application/json",
-    Authorization: "Bearer jhWqCzupouL4o1VmjWWZtNN-lTSJVPkIVlO-4qO2",
+    Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
   };
 
   fetch(url, {
@@ -33,12 +33,12 @@ function saveCookieToCloudflareKV(cookieValue) {
 
 // Function to apply cookies from Cloudflare KV
 function applyCookiesFromCloudFlare(sendResponse) {
-  const accountID = "f178d4c8c43acc247a04c9ea94017495";
-  const namespaceID = "9bf25b63071e43b6a2a92b8aef6a64cf";
-  const key = "FEMC";
+  const accountID = "70519d70a3636a1c4618c7b106fe13ea";
+  const namespaceID = "b0b10aa96ddb42dc894d121a6eb3e844";
+  const key = "CS2110";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
-    Authorization: "Bearer jhWqCzupouL4o1VmjWWZtNN-lTSJVPkIVlO-4qO2",
+    Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
   };
 
   fetch(url, {
@@ -156,12 +156,12 @@ function saveCredentialsToCloudflareKV(credentials) {
   }
 
   console.log("Received credentials to save:", credentials);
-  const accountID = "f178d4c8c43acc247a04c9ea94017495";
-  const namespaceID = "75170ed64f4d4c9b9525de367132e4ad";
-  const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/FEMCredentials`;
+  const accountID = "70519d70a3636a1c4618c7b106fe13ea";
+  const namespaceID = "badb90964c4c4f0c869cb090a553e1c6";
+  const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/CS-BETA`;
   const headers = {
     "Content-Type": "application/json",
-    Authorization: "Bearer jhWqCzupouL4o1VmjWWZtNN-lTSJVPkIVlO-4qO2",
+    Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
   };
 
   const body = JSON.stringify(credentials);
@@ -198,12 +198,12 @@ function saveCredentialsToCloudflareKV(credentials) {
 
 // Function to fetch credentials from Cloudflare KV
 function fetchCredentialsFromCloudflare() {
-  const accountID = "f178d4c8c43acc247a04c9ea94017495";
-  const namespaceID = "75170ed64f4d4c9b9525de367132e4ad";
-  const key = "FEMCredentials";
+  const accountID = "70519d70a3636a1c4618c7b106fe13ea";
+  const namespaceID = "badb90964c4c4f0c869cb090a553e1c6";
+  const key = "CS-BETA";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
-    Authorization: "Bearer jhWqCzupouL4o1VmjWWZtNN-lTSJVPkIVlO-4qO2",
+    Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
   };
 
   return fetch(url, {
