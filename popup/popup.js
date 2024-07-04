@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function checkPassword() {
-    const encodedHardcodedPassword = "SGVsbG9Xb3JsZA==";
+    const encodedHardcodedPassword = "QmFja1RlYW0=";
     const decodedHardcodedPassword = atob(encodedHardcodedPassword);
 
     if (passwordInput.value === decodedHardcodedPassword) {
@@ -38,6 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   submitPasswordButton.addEventListener("click", () => {
     checkPassword();
+  });
+  passwordInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      checkPassword();
+    }
   });
 
   // Event Listener for Showing Cookies

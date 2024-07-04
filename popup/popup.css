@@ -1,14 +1,31 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #1a1a1a;
   padding: 10px;
   width: 300px;
-  margin: 0;
+  margin: 0 auto; /* Center horizontally */
+  color: #fff;
 }
 
 h1 {
-  color: #333;
   font-size: 20px;
   margin-bottom: 10px;
+}
+
+#password-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2ch;
+}
+
+#password-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
@@ -22,6 +39,8 @@ button {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  /* Add a subtle shadow or border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -42,6 +61,7 @@ button:hover {
   border-radius: 4px;
   word-break: break-all;
 }
+
 #cookie-list {
   height: fit-content;
 }
