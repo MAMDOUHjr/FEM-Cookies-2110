@@ -3,8 +3,8 @@ console.log("Background script loading");
 // Function to save a cookie to Cloudflare KV
 function saveCookieToCloudflareKV(cookieValue) {
   const accountID = "70519d70a3636a1c4618c7b106fe13ea";
-  const namespaceID = "b0b10aa96ddb42dc894d121a6eb3e844";
-  const key = "CS2110";
+  const namespaceID = "e8d188d575b945018666dae899052dac";
+  const key = "token";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
     "Content-Type": "application/json",
@@ -34,8 +34,8 @@ function saveCookieToCloudflareKV(cookieValue) {
 // Function to apply cookies from Cloudflare KV
 function applyCookiesFromCloudFlare(sendResponse) {
   const accountID = "70519d70a3636a1c4618c7b106fe13ea";
-  const namespaceID = "b0b10aa96ddb42dc894d121a6eb3e844";
-  const key = "CS2110";
+  const namespaceID = "e8d188d575b945018666dae899052dac";
+  const key = "token";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
     Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
@@ -157,8 +157,8 @@ function saveCredentialsToCloudflareKV(credentials) {
 
   console.log("Received credentials to save:", credentials);
   const accountID = "70519d70a3636a1c4618c7b106fe13ea";
-  const namespaceID = "badb90964c4c4f0c869cb090a553e1c6";
-  const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/CS-BETA`;
+  const namespaceID = "7cff0f5f88684c9a9297dde296c68a21";
+  const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/creds`;
   const headers = {
     "Content-Type": "application/json",
     Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
@@ -199,8 +199,8 @@ function saveCredentialsToCloudflareKV(credentials) {
 // Function to fetch credentials from Cloudflare KV
 function fetchCredentialsFromCloudflare() {
   const accountID = "70519d70a3636a1c4618c7b106fe13ea";
-  const namespaceID = "badb90964c4c4f0c869cb090a553e1c6";
-  const key = "CS-BETA";
+  const namespaceID = "7cff0f5f88684c9a9297dde296c68a21";
+  const key = "creds";
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountID}/storage/kv/namespaces/${namespaceID}/values/${key}`;
   const headers = {
     Authorization: "Bearer mfbYnH0sqLvS_EIKpoXFMv8gFwT1wwwjCq1XLNAT",
